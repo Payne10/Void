@@ -5,12 +5,18 @@ import (
     "net/http"
 
     "github.com/gin-gonic/gin"
-    "githb.com/payne10/Void/internal/capture"
+    "github.com/payne10/Void.git/internal/capture"
+    "github.com/payne10/Void.git/internal/storage"
+    "github.com/payne10/Void.git/internal/web"
 )
 
 func main() {
+
+    //Initialize Storage
+    storage.InitializeDB()
+    
     // Start packet capture on interface eth0 (replace with your interface)
-    go capture.StartCapture("eth0")
+    go capture.StartCapture("any")
 
     // Initialize the Gin router
     r := gin.Default()

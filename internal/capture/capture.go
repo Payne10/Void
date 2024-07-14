@@ -4,6 +4,7 @@ import (
     "log"
     "github.com/google/gopacket"
     "github.com/google/gopacket/pcap"
+    "github.com/payne10/Void.git/internal/storage"
 )
 
 var (
@@ -26,12 +27,8 @@ func StartCapture(iface string) {
 
 // processPacket processes each captured packet and stores it
 func processPacket(packet gopacket.Packet) {
-    packets = append(packets, packet)
-    log.Println(packet)
-}
-
-// GetPackets returns the stored packets
-func GetPackets() []gopacket.Packet {
-    return packets
+    packeData := packet.String()
+    storage.InsertPacket(packetData)
+    log.Println(packetData)
 }
 
