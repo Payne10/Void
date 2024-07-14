@@ -29,6 +29,5 @@ func StartCapture(iface string) {
 func processPacket(packet gopacket.Packet) {
     packetData := packet.String()
     storage.InsertPacket(packetData)
-    log.Println(packetData)
 }
 
