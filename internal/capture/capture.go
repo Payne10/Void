@@ -27,7 +27,7 @@ func StartCapture(iface string) {
 
 // processPacket processes each captured packet and stores it
 func processPacket(packet gopacket.Packet) {
-    packeData := packet.String()
+    packetData := packet.String()
     storage.InsertPacket(packetData)
     log.Println(packetData)
 }
