@@ -1,9 +1,8 @@
-```markdown
 # Void
 
 `Void` is a comprehensive networking tool written in Go designed to sit between your router and the rest of your internal LAN. It captures and analyzes all network traffic, creating a visual map of the network and allowing for packet manipulation, firewall management, and machine learning-based traffic analysis.
 
-### Features
+## Features
 
 - **Network Mapping**: Automatically discovers and maps all devices on the network.
 - **Packet Capturing**: Captures and duplicates all network packets in real-time.
@@ -13,7 +12,7 @@
 - **Protocol Analysis**: Supports deep packet inspection and protocol analysis.
 - **Scalability**: Optimized for high throughput and large networks.
 
-### Installation
+## Installation
 
 ### Prerequisites
 
@@ -25,7 +24,7 @@
 ```bash
 git clone https://github.com/Payne10/Void.git
 cd void
-```
+
 
 ### Install Dependencies
 
