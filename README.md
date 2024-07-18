@@ -1,7 +1,7 @@
 ```markdown
-# void
+# Void
 
-`void` is a comprehensive networking tool written in Go designed to sit between your router and the rest of your internal LAN. It captures and analyzes all network traffic, creating a visual map of the network and allowing for packet manipulation, firewall management, and machine learning-based traffic analysis.
+`Void` is a comprehensive networking tool written in Go designed to sit between your router and the rest of your internal LAN. It captures and analyzes all network traffic, creating a visual map of the network and allowing for packet manipulation, firewall management, and machine learning-based traffic analysis.
 
 ## Features
 
@@ -23,7 +23,7 @@
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/void.git
+git clone https://github.com/Payne10/Void.git
 cd void
 ```
 
@@ -36,7 +36,7 @@ go mod download
 ### Build
 
 ```bash
-go build -o void cmd/main.go
+go build -o Void cmd/main.go
 ```
 
 ## Usage
@@ -46,22 +46,22 @@ go build -o void cmd/main.go
 To start the application, simply run:
 
 ```bash
-sudo ./void
+sudo ./Void
 ```
 
 Note: `sudo` is required to capture network packets.
 
 ### Network Mapping
 
-Upon starting, `void` will automatically create a visual map of the network using ARP requests and responses. The map can be accessed via a web-based interface provided by the application.
+Upon starting, `Void` will automatically create a visual map of the network using ARP requests and responses. The map can be accessed via a web-based interface provided by the application.
 
 ### Packet Capturing and Manipulation
 
-`void` will capture all packets on the specified network interface. Packet duplication and manipulation rules can be configured in the configuration file.
+`Void` will capture all packets on the specified network interface. Packet duplication and manipulation rules can be configured in the configuration file.
 
 ### Machine Learning Integration
 
-`void` integrates machine learning models for traffic analysis and firewall management. Models can be trained on custom datasets and loaded into the application.
+`Void` integrates machine learning models for traffic analysis and firewall management. Models can be trained on custom datasets and loaded into the application.
 
 ## Configuration
 
@@ -101,5 +101,5 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## Contact
 
-For questions or suggestions, please open an issue on GitHub or contact your-email@example.com.
+For questions or suggestions, please open an issue on GitHub or contact pakauffman@proton.me.
 ```
