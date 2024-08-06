@@ -1,14 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .title }}</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.21.1/cytoscape.min.js"></script>
 </head>
 <body>
-    <h1>{{ .title }}</h1>
-    <p>Welcome to the Void Dashboard!</p>
-    <button id="loadPackets">Load Packets</button>
-    <pre id="packetData"></pre>
+    <header class="top-bar">
+        <nav class="navbar">
+            <div class="navbar-header">
+                <div class="title">
+                    <h1>Void</h1>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="/path/to/your/logo.png" alt="VOID" class="logo">
+        </div>
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="/system">
+                    <i class="fas fa-cogs"></i>
+                    <span>System</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="/monitoring">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Monitoring</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="/resources">
+                    <i class="fas fa-book"></i>
+                    <span>Resources</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="/tools">
+                    <i class="fas fa-wrench"></i>
+                    <span>Tools</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="/help">
+                    <i class = "fas fa-question-circle"></i>
+                    <span>Help</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <main class="main-content">
+        <div class="box" id="networkMap">
+            <h2>Network Map</h2>
+                <div id="cy"></div>
+        </div>
+        <div class="box" id="packetFeed">
+            <h2>Live Packet Feed</h2>
+            <button id="loadPackets">Load Packets</button>
+            <pre id="packetData"></pre>
+        </div>
+    </main>
     <script src="/static/js/scripts.js"></script>
 </body>
 </html>
