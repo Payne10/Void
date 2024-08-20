@@ -8,7 +8,7 @@ import (
 
 // SetupRoutes sets up the Gin routes
 func SetupRoutes(router *gin.Engine) {
-    router.LoadHTMLGlob("internal/web/templates/index.html")
+    router.LoadHTMLGlob("internal/web/templates/*")
     router.Static("/static", "./internal/web/static")
 
     router.GET("/", func(c *gin.Context) {
